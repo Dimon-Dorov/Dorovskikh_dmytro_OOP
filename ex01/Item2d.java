@@ -5,18 +5,22 @@ import java.io.Serializable;
 * @version 1.0
 */
 public class Item2d implements Serializable {
-/** Аргумент вычисляемой функции. */
+/** 
+* @param leng - довжина
+* @param widt - ширина
+* @param heig - висота
+ */
 // transient
 private double leng;
 private double widt;
 private double heig;
-/** Результат вычисления функции. */
+/** Результат вычисления. */
 private double p;
 private double s;
 private double v;
 /** Автоматически сгенерированная константа */
 private static final long serialVersionUID = 1L;
-/** Инициализирует поля {@linkplain Item2d#x}, {@linkplain Item2d#y} */
+/** Инициализирует поля {@linkplain Item2d#leng}, {@linkplain Item2d#widt}, {@linkplain Item2d#heig}, {@linkplain Item2d#p}, {@linkplain Item2d#s}, {@linkplain Item2d#v} */
 public Item2d() {
 leng = .0;
 widt = .0;
@@ -25,10 +29,13 @@ p = .0;
 s = .0;
 v = .0;
 }
-/** Устанавливает значения полей: аргумента
-* и результата вычисления функции.
-* @param x - значение для инициализации поля {@linkplain Item2d#x}
-* @param y - значение для инициализации поля {@linkplain Item2d#y}
+/** Устанавливает значения полей и результата вычисления.
+* @param leng - значение для инициализации поля {@linkplain Item2d#leng}
+* @param widt - значение для инициализации поля {@linkplain Item2d#widt}
+* @param heig - значение для инициализации поля {@linkplain Item2d#heig}
+* @param p - значение для инициализации поля {@linkplain Item2d#p}
+* @param s - значение для инициализации поля {@linkplain Item2d#s}
+* @param v - значение для инициализации поля {@linkplain Item2d#v}
 */
 public Item2d(double leng, double widt, double heig, double p, double s, double v) {
 this.leng = leng;
@@ -38,9 +45,11 @@ this.p = p;
 this.s = s;
 this.v = v;
 }
-/** Установка значения поля {@linkplain Item2d#x}
-* @param x - значение для {@linkplain Item2d#x}
-* @return Значение {@linkplain Item2d#x}
+/** Установка значения поля {@linkplain Item2d#leng}, {@linkplain Item2d#widt}, {@linkplain Item2d#heig}
+* @param leng - значение для {@linkplain Item2d#leng}
+* @param widt - значение для {@linkplain Item2d#widt}
+* @param heig - значение для {@linkplain Item2d#heig}
+* @return Значение {@linkplain Item2d#p}, {@linkplain Item2d#s}, {@linkplain Item2d#v}
 */
 public double setL(double leng) {
 return this.leng = leng;
@@ -51,8 +60,8 @@ return this.widt = widt;
 public double setH(double heig) {
 return this.heig = heig;
 }
-/** Получение значения поля {@linkplain Item2d#x}
-* @return Значение {@linkplain Item2d#x}
+/** Получение значения поля {@linkplain Item2d#leng}, {@linkplain Item2d#widt}, {@linkplain Item2d#heig}
+* @return Значение {@linkplain Item2d#leng}, {@linkplain Item2d#widt}, {@linkplain Item2d#heig}
 */
 public double getL() {
 return leng;
@@ -63,9 +72,11 @@ return widt;
 public double getH() {
 return heig;
 }
-/** Установка значения поля {@linkplain Item2d#y}
-* @param y - значение для {@linkplain Item2d#y}
-* @return Значение {@linkplain Item2d#y}
+/** Установка значения поля {@linkplain Item2d#p}, {@linkplain Item2d#s}, {@linkplain Item2d#v}
+* @param p - значение для инициализации поля {@linkplain Item2d#p}
+* @param s - значение для инициализации поля {@linkplain Item2d#s}
+* @param v - значение для инициализации поля {@linkplain Item2d#v}
+* @return Значение {@linkplain Item2d#p}, {@linkplain Item2d#s}, {@linkplain Item2d#v}
 */
 public double setP(double p) {
 return this.p = p;
@@ -76,8 +87,8 @@ return this.s = s;
 public double setV(double v) {
 return this.v = v;
 }
-/** Получение значения поля {@linkplain Item2d#y}
-* @return значение {@linkplain Item2d#y}
+/** Получение значения поля {@linkplain Item2d#p}, {@linkplain Item2d#s}, {@linkplain Item2d#v}
+* @return значение {@linkplain Item2d#p}, {@linkplain Item2d#s}, {@linkplain Item2d#v}
 */
 public double getP() {
 return p;
@@ -88,9 +99,13 @@ return s;
 public double getV() {
 return v;
 }
-/** Установка значений {@linkplain Item2d#x} и {@linkplain Item2d#y}
-* @param x - значение для {@linkplain Item2d#x}
-* @param y - значение для {@linkplain Item2d#y}
+/** Установка значений {@linkplain Item2d#leng}, {@linkplain Item2d#widt}, {@linkplain Item2d#heig} и {@linkplain Item2d#p}, {@linkplain Item2d#s}, {@linkplain Item2d#v}
+* @param leng - значение для {@linkplain Item2d#leng}
+* @param widt - значение для {@linkplain Item2d#widt}
+* @param heig - значение для {@linkplain Item2d#heig}
+* @param p - значение для инициализации поля {@linkplain Item2d#p}
+* @param s - значение для инициализации поля {@linkplain Item2d#s}
+* @param v - значение для инициализации поля {@linkplain Item2d#v}
 * @return this
 */
 public Item2d setLHWPSV(double leng, double heig, double widt, double p, double s, double v) {

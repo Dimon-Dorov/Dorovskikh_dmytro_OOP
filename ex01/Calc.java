@@ -28,16 +28,20 @@ public void setResult(Item2d result) {this.result = result;
 public Item2d getResult() {
 return result;
 }
-/** Вычисляет значение функции.
-* @param x - аргумент вычисляемой функции.
+/** Вычисляет значение.
+* @param leng - довжина
+* @param widt - ширина
+* @param heig - висота
 * @return результат вычисления функции.
 */
 private double calc(double leng, double widt, double heig) {
 return (leng+widt+heig)*4;
 }
-/** Вычисляет значение функции и сохраняет
+/** Вычисляет значение и сохраняет
 * результат в объекте {@linkplain Calc#result}
-* @param x - аргумент вычисляемой функции.
+* @param leng - довжина
+* @param widt - ширина
+* @param heig - висота
 */
 public double init(double leng, double widt, double heig) {
     result.setL(leng);

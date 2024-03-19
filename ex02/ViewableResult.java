@@ -1,18 +1,13 @@
 package ex02;
 /** ConcreteCreator
-* (шаблон проектирования
-* Factory Method)<br>
-* Объявляет метод,
-* "фабрикующий" объекты
-* @author xone
-* @version 1.0
-* @see Viewable
-* @see ViewableResult#getView()
+* (шаблон Factory Method)<br>
+* Оголошує метод, 
+* який "фабрикує" об'єкти
 */
 public class ViewableResult implements Viewable {
-    /** Создаёт отображаемый объект {@linkplain ViewResult} */
+    /** Створює відображаючий об'єкт {@linkplain ViewResult} */
     @Override
     public View getView() {
-    return new ViewResult();
+        return new ViewResult();
     }
-    }
+}

@@ -1,14 +1,13 @@
 package ex02;
 /** Creator
-* (шаблон проектирования
-* Factory Method)<br>
-* Объявляет метод,
-* "фабрикующий" объекты
+* (шаблон Factory Method)<br>
+* Оголошує метод, 
+* який "фабрикує" об'єкти
 * @author xone
 * @version 1.0
 * @see Viewable#getView()
 */
 public interface Viewable {
-/** Создаёт объект, реализующий {@linkplain View} */
-public View getView();
+    /** Створює об'єкт, який реалізує {@linkplain View} */
+    public View getView();
 }

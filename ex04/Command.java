@@ -1,12 +1,12 @@
 package ex04;
-/** Интерфейс команды
-* или задачи;
-* шаблоны: Command,
+/** Інтерфейс команди
+* або завдання;
+* шаблони: Command,
 * Worker Thread
 * @author xone
 * @version 1.0
 */
 public interface Command {
-/** Выполнение команды; шаблоны: Command, Worker Thread */
-public void execute();
+    /** Виконування команди; шаблони: Command, Worker Thread */
+    public void execute();
 }

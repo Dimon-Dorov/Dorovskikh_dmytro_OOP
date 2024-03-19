@@ -5,36 +5,33 @@ import ex04.ChangeConsoleCommand;
 import ex04.GenerateConsoleCommand;
 import ex04.Menu;
 import ex04.ViewConsoleCommand;
-/** Вычисление и отображение
-* результатов; содержит реализацию
-* статического метода main()
+/** Обчислення та відображення
+* результатів; містить реалізацію
+* статичного методу main()
 * @author xone
 * @version 5.0
 * @see Main#main
 */
 public class Main {
-/** Объект, реализующий интерфейс {@linkplain View};
-* обслуживает коллекцию объектов {@linkplain ex01.Item2d};
-* инициализируется с помощью Factory Method
-*/
-private View view = new ViewableResult().getView();
-/** Объект класса {@linkplain Menu};
-* макрокоманда (шаблон Command)
-*/
-private Menu menu = new Menu();
-/** Обработка команд пользователя */
-public void run() {
-menu.add(new ViewConsoleCommand(view));
-menu.add(new GenerateConsoleCommand(view));
-menu.add(new ChangeConsoleCommand(view));
-menu.add(new ExecuteConsoleCommand(view));
-menu.execute();
-}
-/** Выполняется при запуске программы
-* @param args параметры запуска программы
-*/
-public static void main(String[] args) {
-Main main = new Main();
-main.run();
-}
+    /** Об'єкт, що реалізує інтерфейс {@linkplain View};
+    * обслуговує колекцію об'єктів {@linkplain ex01.Item2d};
+    * ініціалізується за допомогою Factory Method
+    */
+    private View view = new ViewableResult().getView();
+    /** Об'єкт класу {@linkplain Menu};
+    * макрокоманда (шаблон Command)
+    */
+    private Menu menu = new Menu();
+    /** Обробка команд */
+    public void run() {
+        menu.add(new ViewConsoleCommand(view));
+        menu.add(new GenerateConsoleCommand(view));
+        menu.add(new ChangeConsoleCommand(view));
+        menu.add(new ExecuteConsoleCommand(view));
+        menu.execute();
+    }
+    public static void main(String[] args) {
+        Main main = new Main();
+        main.run();
+    }
 }

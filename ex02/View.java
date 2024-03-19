@@ -1,28 +1,27 @@
 package ex02;
 import java.io.IOException;
 /** Product
-* (шаблон проектирования
-* Factory Method)<br>
-* Интерфейс "фабрикуемых"
-* объектов<br>
-* Объявляет методы
-* отображения объектов
+* (шаблон Factory Method)<br>
+* Інтерфейс "фабрикуючих"
+* об'єктів<br>
+* Оголошує методи
+* відображення об'єктів
 * @author xone
 * @version 1.0
 */
 public interface View {
-/** Отображает заголовок */
-public void viewHeader();
-/** Отображает основную часть */
-public void viewBody();
-/** Отображает окончание */
-public void viewFooter();
-/** Отображает объект целиком */
-public void viewShow();
-/** Выполняет инициализацию */
-public void viewInit();
-/** Сохраняет данные для последующего восстановления */
-public void viewSave() throws IOException;
-/** Восстанавливает ранее сохранённые данные */
-public void viewRestore() throws Exception;
+    /** Відображає заголовок */
+    public void viewHeader();
+    /** Відображає основну частину */
+    public void viewBody();
+    /** Відображає закінчення */
+    public void viewFooter();
+    /** Відображає об'єкт */
+    public void viewShow();
+    /** Виконує ініціалізацію */
+    public void viewInit();
+    /** Зберігає дані */
+    public void viewSave() throws IOException;
+    /** Відновлює збережені дані */
+    public void viewRestore() throws Exception;
 }
